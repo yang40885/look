@@ -1,4 +1,3 @@
-<!-- 登陆页面 -->
 <template>
   <div class="h-screen flex">
     <!-- 左侧 -->
@@ -51,33 +50,26 @@
 </template>
 
 <script setup lang="ts">
-import { AuthService } from '@/client/api'
-import router from '@/router'
 import { ref } from 'vue'
+import router from '@/router'
 
-const imgs = ['./login/3.png', './login/2.png', './login/1.png','./login/2.png']
+const imgs = ['./login/3.png', './login/2.png', './login/1.png', './login/2.png']
 const showImg = Math.floor(Math.random() * 3) + 1
 
-const account = ref()
-const password = ref()
-// 第三方仓库
-const clientID = '618c693f772f306e0b303d1c8d5cc2f6350f73db98f1700bcfd3fc80163e0aa0'
-const clientSecret = '4ccdaa886bcd0faf0a2310b8de12ca416ed1edb5ded46449be2c0ece9de7d1ed'
+const account = ref('')
+const password = ref('')
 const acceptTerm = ref(false)
 
 const login = async () => {
-  const scope = 'user_info projects'
-  await AuthService.login(account.value, password.value, clientID, clientSecret, scope).then(
-    (resp) => {
-      const data = resp!
-      alert('登陆成功')
-      localStorage.setItem('accessToken', data.access_token)
-      localStorage.setItem('tokenType', data.token_type)
-      localStorage.setItem('expiresIn', data.expires_in.toString())
-      localStorage.setItem('scope', data.scope)
-      localStorage.setItem('isLogin', '1')
-      router.push('/')
-    }
-  )
+  // 检查输入的账号和密码
+  if (account.value === 'yang' && password.value === '123') {
+    // 如果账号和密码正确，跳转
+    alert('登陆成功')
+    localStorage.setItem('isLogin', '1')
+    router.push('/') // 跳转到主页
+  } else {
+    // 如果账号或密码错误，提醒用户
+    alert('账号或密码错误')
+  }
 }
 </script>
