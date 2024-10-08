@@ -56,8 +56,8 @@ import router from '@/router'
 const imgs = ['./login/3.png', './login/2.png', './login/1.png', './login/2.png']
 const showImg = Math.floor(Math.random() * 3) + 1
 
-const account = ref('')
-const password = ref('')
+const account = ref('yang')
+const password = ref('123')
 const acceptTerm = ref(false)
 
 const login = async () => {
