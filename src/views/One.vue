@@ -57,12 +57,12 @@ const imgs = ['./login/3.png', './login/2.png', './login/1.png', './login/2.png'
 const showImg = Math.floor(Math.random() * 3) + 1
 
 const account = ref('yang')
-const password = ref('123')
+const password = ref('')
 const acceptTerm = ref(false)
 
 const login = async () => {
   // 检查输入的账号和密码
-  if (account.value === 'yang' && password.value === '123') {
+  if (account.value === 'yang' && password.value === '') {
     // 如果账号和密码正确，跳转
     alert('登陆成功')
     localStorage.setItem('isLogin', '1')
