@@ -21,8 +21,53 @@ const menuItems: MenuItem[] = [
     path: '/'
   },
   {
-    icon: 'iconoir:code',
+    icon: 'material-symbols:archive-outline-rounded',
     desc: '代码',
+    path: '/repos'
+  },
+  {
+    icon: 'iconoir:code',
+    desc: 'AI',
+    path: '/repos'
+  },
+  {
+    icon: 'material-symbols:article-sharp',
+    desc: '事项',
+    path: '/repos'
+  },
+  {
+    icon: 'material-symbols:auto-read-pause-sharp',
+    desc: '制品',
+    path: '/repos'
+  },
+  {
+    icon: 'material-symbols:bath-private-sharp',
+    desc: '洞察',
+    path: '/repos'
+  },
+  {
+    icon: 'material-symbols:bed-sharp',
+    desc: '知识',
+    path: '/repos'
+  },
+  {
+    icon: 'material-symbols:bookmarks-sharp',
+    desc: '自动化',
+    path: '/repos'
+  },
+  {
+    icon: 'material-symbols:co-present',
+    desc: '',
+    path: '/repos'
+  },
+  {
+    icon: 'iconoir:code',
+    desc: '',
+    path: '/repos'
+  },
+  {
+    icon: 'ic:outline-settings',
+    desc: '',
     path: '/repos'
   }
 ]
