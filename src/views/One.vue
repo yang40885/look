@@ -56,13 +56,13 @@ import router from '@/router'
 const imgs = ['./login/3.png', './login/2.png', './login/1.png', './login/2.png']
 const showImg = Math.floor(Math.random() * 3) + 1
 
-const account = ref('yang123')
-const password = ref('123')
+const account = ref('2721597966@qq.com')
+const password = ref('123456')
 const acceptTerm = ref(false)
 
 const login = async () => {
   // 检查输入的账号和密码
-  if (account.value === 'yang123' && password.value === '123') {
+  if (account.value === '2721597966@qq.com' && password.value === '123456') {
     // 如果账号和密码正确，跳转
     alert('登陆成功')
     localStorage.setItem('isLogin', '1')
