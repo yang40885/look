@@ -79,12 +79,12 @@ const nowPath = computed(() => route.path.split('/')[1])
   <AccountMenuItem />
 
   <div class="h-screen fixed z-20 w-16 p-2 bg-base-200 border-r flex flex-col justify-between">
-    <div class="flex items-center flex-col gap-1">
+    <div class="flex items-center flex-col gap-7">
       <RouterLink
         v-for="i in menuItems"
         role="button"
         :key="i.desc"
-        class="flex flex-col items-center hover:bg-primary/10 hover:text-primary transition-colors w-full rounded-md p-1"
+        class="flex flex-col items-center hover:bg-blue-300 hover:text-primary transition-colors w-full rounded-md p-1"
         :class="{ 'bg-primary/10 text-primary': i.path.replace('', '') === nowPath }"
         :to="i.path"
       >
