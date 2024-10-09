@@ -28,47 +28,47 @@ const menuItems: MenuItem[] = [
   {
     icon: 'iconoir:code',
     desc: 'AI',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'material-symbols:article-sharp',
     desc: '事项',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'material-symbols:auto-read-pause-sharp',
     desc: '制品',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'material-symbols:bath-private-sharp',
     desc: '洞察',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'material-symbols:bed-sharp',
     desc: '知识',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'material-symbols:bookmarks-sharp',
     desc: '自动化',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'material-symbols:co-present',
     desc: '',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'iconoir:code',
     desc: '',
-    path: '/repos'
+    path: '/'
   },
   {
     icon: 'ic:outline-settings',
     desc: '',
-    path: '/repos'
+    path: '/'
   }
 ]
 
@@ -85,7 +85,7 @@ const nowPath = computed(() => route.path.split('/')[1])
         role="button"
         :key="i.desc"
         class="flex flex-col items-center hover:bg-primary/10 hover:text-primary transition-colors w-full rounded-md p-1"
-        :class="{ 'bg-primary/10 text-primary': i.path.replace('/', '') === nowPath }"
+        :class="{ 'bg-primary/10 text-primary': i.path.replace('', '') === nowPath }"
         :to="i.path"
       >
         <Icon :icon="i.icon" class="size-6" />
