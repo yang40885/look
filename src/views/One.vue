@@ -50,11 +50,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import router from '@/router'
 
-const imgs = ['./login/3.png', './login/2.png', './login/1.png', './login/2.png']
-const showImg = Math.floor(Math.random() * 3) + 1
+const imgs = ['./login/3.png', './login/2.png', './login/1.png', './login/2.png','./login/2.png']
+const showImg = ref(Math.floor(Math.random() * imgs.length))
 
 const account = ref('2721597966@qq.com')
 const password = ref('123456')
@@ -72,4 +72,23 @@ const login = async () => {
     alert('账号或密码错误')
   }
 }
+
+// 轮播图逻辑
+let intervalId;
+
+const changeImage = () => {
+  showImg.value = Math.floor(Math.random() * imgs.length);
+};
+
+onMounted(() => {
+  intervalId = setInterval(changeImage, 2000); // 每 2 秒更换一次图片
+});
+
+onBeforeUnmount(() => {
+  clearInterval(intervalId); // 清理定时器
+});
 </script>
+
+<style>
+/* 你的样式 */
+</style>

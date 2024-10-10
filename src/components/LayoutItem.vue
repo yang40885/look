@@ -97,7 +97,7 @@ const nowPath = computed(() => route.path.split('/')[1])
     <div class="flex items-center flex-col gap-1">
       <div
         role="button"
-        class="flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-colors w-full py-2 rounded-md"
+        class="flex items-center justify-center hover:bg-blue-300 hover:text-primary transition-colors w-full py-2 rounded-md"
         :class="{ 'bg-primary/10 text-primary': store.isShowMenu }"
         @click="store.toggleMenu()"
       >
