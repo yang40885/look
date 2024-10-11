@@ -74,14 +74,14 @@ const login = async () => {
 }
 
 // 轮播图逻辑
-let intervalId;
+let intervalId: number;
 
 const changeImage = () => {
   showImg.value = Math.floor(Math.random() * imgs.length);
 };
 
 onMounted(() => {
-  intervalId = setInterval(changeImage, 2000); // 每 2 秒更换一次图片
+  intervalId = setInterval(changeImage, 1000); // 每 2 秒更换一次图片
 });
 
 onBeforeUnmount(() => {
